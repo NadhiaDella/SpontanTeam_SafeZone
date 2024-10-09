@@ -357,4 +357,8 @@ nav {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .tes {
+    text-align: center;
+  }
+
 }
