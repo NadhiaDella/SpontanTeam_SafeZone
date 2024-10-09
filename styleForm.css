@@ -250,6 +250,7 @@ nav {
   max-width: 600px;
   margin: auto;
   margin-bottom: 4rem;
+  text-align: center;
 }
 
 .footer__nav {
@@ -259,6 +260,7 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+  text-align: center;
 }
 
 .footer__link a {
