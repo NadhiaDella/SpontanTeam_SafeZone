@@ -57,3 +57,13 @@ ScrollReveal().reveal(".informasi__card", {
   ...scrollRevealOption,
   interval: 400,
 });
+
+
+function NavMobile() {
+  const konten = document.getElementById('navMobile');
+  if (konten.style.display === 'none' || konten.style.display === '') {
+      konten.style.display = 'inline'; // Tampilkan konten
+  } else {
+      konten.style.display = 'none'; // Sembunyikan konten
+  }
+}

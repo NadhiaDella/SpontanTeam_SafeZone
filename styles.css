@@ -76,6 +76,13 @@ header {
   background-repeat: no-repeat;
 }
 
+.icon__burger{
+  display: none;
+  
+
+
+}
+
 nav {
   background-color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid var(--extra-light);
@@ -102,6 +109,41 @@ nav {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+.navbar__mobile{
+  display: none;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  position: fixed;
+  background-color: var( --primary-color);
+  width: 50%;
+  height: 100%;
+}
+
+.ul__mobile{
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+}
+
+.icon__close{
+  display: flex;
+  justify-content: end;
+}
+
+.list__menu__mobile{
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+.list__menu__mobile a {
+  padding-top: 1rem;
+  font-size: 1.4rem;
 }
 
 .link a {
@@ -498,6 +540,14 @@ nav {
 }
 
 @media (width < 900px) {
+  .icon__burger{
+    display: block;
+  }
+
+ 
+
+ 
+
   .link:not(.search) {
     display: none;
   }
@@ -540,6 +590,9 @@ nav {
 
 @media (width < 600px) {
 
+.nav__links{
+  display: none;
+}
 
 
 
