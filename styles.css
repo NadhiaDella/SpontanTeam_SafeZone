@@ -39,7 +39,7 @@
 .btn {
   padding: 0.75rem 1.5rem;
   outline: none;
-  border-style:var(--white);
+  border-style: var(--white);
   font-size: 1rem;
   color: var(--primary-color);
   background-color: var(--secondary-color);
@@ -70,16 +70,14 @@ body {
 
 header {
   background-image: linear-gradient(to top, var(--primary-color), transparent),
-    url(Gambar/Web4.png);
+    url(Gambar/Web4.webp);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.icon__burger{
+.icon__burger {
   display: none;
-  
-
 
 }
 
@@ -111,36 +109,37 @@ nav {
   gap: 2rem;
 }
 
-.navbar__mobile{
+.navbar__mobile {
   display: none;
   top: 0;
   right: 0;
   z-index: 10;
   position: fixed;
-  background-color: var( --primary-color);
+  background-color: var(--primary-color);
   width: 50%;
   height: 100%;
 }
 
-.ul__mobile{
+.ul__mobile {
   position: absolute;
   z-index: 20;
   top: 0;
   left: 0;
 }
 
-.icon__close{
+.icon__close {
   display: flex;
   justify-content: end;
 }
 
-.list__menu__mobile{
+.list__menu__mobile {
   padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 20rem;
   display: flex;
   flex-direction: column;
 }
+
 .list__menu__mobile a {
   padding-top: 1rem;
   font-size: 1.4rem;
@@ -242,11 +241,9 @@ nav {
 }
 
 .konseling {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.05),
-    transparent
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.05),
+      transparent);
 }
 
 .konseling__grid {
@@ -311,6 +308,51 @@ nav {
   cursor: pointer;
 }
 
+.button {
+  background-color: #bd7c3c;
+  font: 0.6rem sans-serif;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 25px;
+}
+
+.input-form {
+  width: 70%;
+  margin: auto;
+
+}
+
+.input1 {
+  text-align: start;
+
+}
+
+.input1 label {
+  font-size: 1rem;
+}
+
+.input1 input {
+  width: 200px;
+}
+
+.input2 {
+  display: flex;
+  text-align: start;
+}
+
+.input2 label {
+  font-size: 1rem;
+}
+
+.input2 input {
+  width: 200px;
+  text-align: start;
+  margin-left: 20px;
+}
+
 .hukum__container {
   padding: 5rem 0;
 }
@@ -357,12 +399,12 @@ nav {
 }
 
 
- .informasi h4 {
+.informasi h4 {
   display: -webkit-box;
-  -webkit-line-clamp:5;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
- }
+}
 
 .informasi__grid {
   margin-top: 4rem;
@@ -434,7 +476,7 @@ nav {
   text-align: center;
   font-size: 9rem;
   font-weight: 700;
-  background-image: url("Gambar/Hero.png");
+  background-image: url("Gambar/Hero.webp");
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px var(--extra-light);
@@ -539,21 +581,107 @@ nav {
   border-top: 1px solid var(--extra-light);
 }
 
-@media (width < 900px) {
-  .icon__burger{
+/* Center the form on the page */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  /* 16:9 aspect ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+}
+
+.row h2,
+h3 {
+  text-align: center;
+}
+
+.row p {
+  text-align: justify;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.col-4 {
+  width: 32%;
+  /* Default for larger screens */
+  padding: 5px 15px;
+  /* Reduced padding */
+}
+
+.col-8 {
+  width: 64%;
+  /* Default for larger screens */
+  padding: 5px 15px;
+  /* Reduced padding */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .col-4, .col-8 {
+    width: 100%;
+    padding: 5px 10px;
+  }
+  
+  .row {
+    gap: 10px;
+  }
+
+  .iframe-container {
+    padding-top: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  h2, h3 {
+    font-size: 1.2em;
+  }
+  
+  p {
+    font-size: 0.9em;
+  }
+
+  .iframe-container {
+    padding-top: 110%;
+  }
+}
+
+@media (max-width: 900px) {
+  .icon__burger {
     display: block;
   }
 
- 
-
- 
-
-  .link:not(.search) {
+  .link:not(.search),
+  .nav__links {
     display: none;
   }
 
   .pengaduan__container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     text-align: center;
   }
 
@@ -561,18 +689,14 @@ nav {
     text-align: center;
   }
 
-  .pengaduan__image {
+  .pengaduan__image,
+  .konseling__card:nth-child(2) {
     grid-area: 1/1/2/2;
+    transform: translateY(0);
   }
 
-  .konseling__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hukum__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  .konseling__grid,
+  .hukum__grid,
   .informasi__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -585,17 +709,9 @@ nav {
   .kegiatan__grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
 }
 
-@media (width < 600px) {
-
-.nav__links{
-  display: none;
-}
-
-
-
+@media (max-width: 600px) {
   .header__container {
     text-align: center;
   }
@@ -608,20 +724,11 @@ nav {
     border: none;
   }
 
-  .konseling__grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .konseling__card:nth-child(2) {
-    transform: translateY(0);
-  }
-
-  .hukum__grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .informasi__grid {
-    grid-template-columns: repeat(1, 1fr);
+  .konseling__grid,
+  .hukum__grid,
+  .informasi__grid,
+  .kegiatan__grid {
+    grid-template-columns: 1fr;
   }
 
   .hero__container p {
@@ -631,51 +738,4 @@ nav {
   .kegiatan__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-}
-
-
-.button {
-background-color: #bd7c3c;
-font: 0.6rem sans-serif;
-padding-left: 1rem;
-padding-right: 1rem;
-padding-top: 0.5rem;
-padding-bottom: 0.5rem;
-margin-top: 1rem;
-border-radius: 25px;
-}
-
-.input-form {
-  width: 70%;
-  margin: auto;
- 
-}
-
-.input1{
-  text-align: start;
- 
-}
-
-.input1 label{
-  font-size: 1rem;
-}
-
-.input1 input {
-  width: 200px;
-}
-
-.input2 {
-  display: flex;
-  text-align: start;
-}
-
-.input2 label{
-  font-size: 1rem;
-}
-
-.input2 input {
-  width: 200px;
-  text-align: start;
-  margin-left: 20px;
 }
