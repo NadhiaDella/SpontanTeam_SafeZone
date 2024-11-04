@@ -14,7 +14,7 @@ ScrollReveal().reveal(".header__container h4", {
 
 ScrollReveal().reveal(".header__container .btn", {
   ...scrollRevealOption,
-  delay: 1000,
+  delay: 500,
 });
 
 // pengaduan container
@@ -26,12 +26,12 @@ ScrollReveal().reveal(".pengaduan__container .section__subheader", {
 
 ScrollReveal().reveal(".pengaduan__container .pengaduan__flex", {
   ...scrollRevealOption,
-  delay: 1000,
+  delay: 500,
 });
 
 ScrollReveal().reveal(".pengaduan__container .btn", {
   ...scrollRevealOption,
-  delay: 1500,
+  delay: 500,
 });
 
 // konseling container
