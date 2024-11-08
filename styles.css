@@ -16,37 +16,6 @@
   box-sizing: border-box;
 }
 
-.section__container {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 5rem 1rem;
-}
-
-.section__header {
-  margin-bottom: 2rem;
-  font-size: 3rem;
-  font-weight: 800;
-  font-family: var(--header-font);
-  text-align: center;
-}
-
-.section__subheader {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-
-.btn {
-  padding: 0.75rem 1.5rem;
-  outline: none;
-  border-style: var(--white);
-  font-size: 1rem;
-  color: var(--primary-color);
-  background-color: var(--secondary-color);
-  cursor: pointer;
-}
-
-
 img {
   width: 100%;
   display: flex;
@@ -76,14 +45,52 @@ header {
   background-repeat: no-repeat;
 }
 
-.icon__burger {
-  display: none;
-
-}
-
 nav {
   background-color: rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid var(--extra-light);
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--header-font);
+  text-align: center;
+}
+
+.text-header {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: var(--header-font);
+}
+
+.section__subheader {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border-style: var(--white);
+  font-size: 1rem;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.icon__burger {
+  display: none;
+
+
+
 }
 
 .nav__bar {
@@ -93,7 +100,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
 }
 
 .nav__logo a {
@@ -419,8 +425,6 @@ nav {
   background-color: var(--primary-color-light);
 }
 
-
-
 .informasi__img img {
   object-fit: cover;
   height: 200px;
@@ -475,6 +479,7 @@ nav {
 .hero__container p {
   text-align: center;
   font-size: 9rem;
+  /* Default font size for larger screens */
   font-weight: 700;
   background-image: url("Gambar/Hero.webp");
   -webkit-background-clip: text;
@@ -581,28 +586,11 @@ nav {
   border-top: 1px solid var(--extra-light);
 }
 
-/* Center the form on the page */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-}
-
-.iframe-container {
-  position: relative;
-  width: 100%;
-  padding-top: 75%;
-  /* 16:9 aspect ratio */
-}
-
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
 }
 
 .row {
@@ -622,10 +610,6 @@ h3 {
   text-align: justify;
 }
 
-.text-justify {
-  text-align: justify;
-}
-
 .col-4 {
   width: 32%;
   /* Default for larger screens */
@@ -640,34 +624,311 @@ h3 {
   /* Reduced padding */
 }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .col-4, .col-8 {
-    width: 100%;
-    padding: 5px 10px;
+.form-wrapper {
+  background: #322415;
+  padding: 20px;
+  /* Reduced padding inside the form */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 600px;
+  /* Set a maximum height */
+  overflow-y: auto;
+  /* Enable vertical scroll */
+}
+
+
+.form-wrapper h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.checkbox-card {
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Checkbox Styling */
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+.form-group div label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Style for custom dropdown arrow */
+.form-group::after {
+  /* Custom arrow symbol */
+  font-size: 1em;
+  color: #333;
+  position: absolute;
+  right: 15px;
+  /* Position arrow inside the padding */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  /* Arrow doesn’t interfere with dropdown click */
+}
+
+/* Button */
+.button-wrapper {
+  text-align: left;
+  /* Aligns button to the right */
+}
+
+.pd-2 {
+  padding-top: 2rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.form-wrapper2 {
+  background-color: #322415;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile h2 {
+  margin: 0;
+}
+
+.info {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.info p {
+  font-size: 0.9em;
+  margin: 8px 0;
+  display: flex;
+  text-align: left;
+  gap: 5px;
+  color: black;
+}
+
+.services h3, .date-selection h3, .time-selection h3 {
+  font-size: 1.1em;
+  margin: 20px 0 10px;
+}
+
+.service-btn {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  font-size: 1em;
+  background-color: #F8E5C9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-btn:hover {
+  background-color: #F7D39D;
+}
+
+.service-btn.active {
+  background-color: #bd7c3c; /* Change to a color that indicates selection */
+  border-color: #bd7c3c;
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  /* 16:9 aspect ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #bd7c3c;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff9830;
+}
+
+@media(min-width:768px){
+  .form-wrapper2 {
+      max-width: 800px;
+      margin: 0 auto;
   }
-  
+
+  .profile {
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+  }
+
+  .profile-pic {
+      margin-right: 15px;
+      margin-bottom: 0;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .col-4,
+  .col-8 {
+    width: 100%;
+    /* Full width on medium screens */
+    padding: 5px 10px;
+    /* Further reduced padding */
+  }
+
   .row {
     gap: 10px;
+    /* Reduce space between columns */
+  }
+
+  .form-wrapper {
+    width: 100%;
+    padding: 15px;
+    /* Further reduced padding inside the form */
+  }
+
+  .text-header {
+    font-size: 3.2rem;
   }
 
   .iframe-container {
     padding-top: 90%;
   }
+
 }
 
 @media (max-width: 576px) {
-  h2, h3 {
+
+  h2,
+  h3 {
     font-size: 1.2em;
   }
-  
+
   p {
     font-size: 0.9em;
   }
 
-  .iframe-container {
-    padding-top: 110%;
+  .form-group input,
+  button[type="submit"] {
+    font-size: 0.9em;
   }
+
+  .form-group select {
+    font-size: 0.9em;
+    /* Smaller font size for smaller screens */
+    padding: 8px;
+    padding-right: 35px;
+    /* Adjust padding for the custom arrow */
+  }
+
+  .form-group::after {
+    font-size: 0.9em;
+    right: 10px;
+    /* Adjust arrow position on smaller screens */
+  }
+
+  .form-wrapper {
+    padding: 10px;
+    /* Minimum padding on very small screens */
+  }
+
+  .profile p {
+    text-align: center;
+}
+
+.iframe-container {
+  padding-top: 110%;
+}
+
 }
 
 @media (max-width: 900px) {
@@ -703,7 +964,7 @@ h3 {
   }
 
   .hero__container p {
-    font-size: 10rem;
+    font-size: 5rem;
   }
 
   .kegiatan__grid {
@@ -732,7 +993,7 @@ h3 {
   }
 
   .hero__container p {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 
   .kegiatan__grid {
